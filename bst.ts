@@ -1,4 +1,4 @@
-// José Castañeda - 1534422
+// José David Castañeda Vasquez - 1534422
 
 import { NodeTree } from "./nodetree";
 
@@ -59,10 +59,11 @@ class BST {
     }
 
     private printNode(nodo: NodeTree): void {
+        if (nodo === this.leaf)
+            return;
         if (nodo?.getLeftChild() !== this.leaf)
             this.printNode(nodo.getLeftChild());
-        if (nodo != this.leaf)
-            console.log(nodo.getData());
+        console.log(nodo.getData())
         if (nodo?.getRightChild() !== this.leaf)
             this.printNode(nodo.getRightChild());
     }
@@ -74,11 +75,11 @@ class BST {
 
 // main
 let myBinarySearchTree: BST = new BST();
+myBinarySearchTree.insert(9);
 myBinarySearchTree.insert(10);
-myBinarySearchTree.insert(7);
 myBinarySearchTree.insert(100);
-myBinarySearchTree.insert(3);
-myBinarySearchTree.insert(38);
+myBinarySearchTree.insert(7);
+myBinarySearchTree.insert(8);
 if (myBinarySearchTree.search(10) != -1) {
     console.log("Dato encontrado");
 } else {

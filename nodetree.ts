@@ -1,4 +1,4 @@
-// José Castañeda - 1534422
+// José David Castañeda Vasquez - 1534422
 
 export class NodeTree {
     private data: number;
